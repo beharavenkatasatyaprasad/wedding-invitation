@@ -1,0 +1,10 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+SUMMARY:Satya ❤️ Mounika Wedding
+DTSTART;TZID=Asia/Kolkata:20250810T120400
+DTEND;TZID=Asia/Kolkata:20250810T140000
+LOCATION: Sri Lakshmi Srinivasa Function Hall, Nellore
+DESCRIPTION:With blessings of our families, we joyfully invite you to our wedding.
+END:VEVENT
+END:VCALENDAR

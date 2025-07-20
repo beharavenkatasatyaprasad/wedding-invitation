@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Satya ❤️ Mounika | Wedding Invitation</title>
+  <meta name="description" content="You are joyfully invited to celebrate the wedding of Satya and Mounika on 10th August 2025. Join us in Nellore and Dachepalli for a beautiful journey of love and tradition." />
+  <meta name="theme-color" content="#ff7eb3">
+  <meta property="og:title" content="Satya ❤️ Mounika Wedding Invitation">
+  <meta property="og:description" content="Celebrate the union of Satya and Mounika on 10th August 2025 with us in Nellore and Dachepalli!">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@1,500&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+
+
+    .countdown-container {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+      transform: translateY(20px);
+      animation: fadeUp 1s ease forwards 0.8s;
+    }
+
+    .countdown-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .time-value {
+      font-size: 3.5rem;
+      font-weight: 800;
+      background: linear-gradient(to bottom, #ffffff, #b8b8b8);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: #b3005e;
+      position: relative;
+      width: 70px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .time-unit {
+      font-size: 0.9rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-top: 0.5rem;
+      color: #b3005e;
+    }
+
+    .time-separator {
+      font-size: 2.5rem;
+      align-self: center;
+      margin-top: -1rem;
+      color: #b3005e;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(145deg, #fff0f5, #fceff9);
+      color: #333;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      text-align: center;
+      padding: 3rem 1rem;
+      color: white;
+      position: relative;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 4rem;
+      margin: 0.2rem 0;
+      animation: bounceIn 2s;
+    }
+
+    header p {
+      font-size: 1.25rem;
+      font-style: italic;
+    }
+
+    .calendar-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      background: #d6336c;
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      font-size: 1rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.3s ease;
+    }
+
+    .calendar-btn:hover {
+      background: #b02553;
+    }
+
+    .section {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: #ffffff;
+      border-radius: 1rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      animation: fadeInUp 1.5s;
+    }
+
+    .section h2 {
+      color: #b3005e;
+      font-size: 2.5rem;
+      font-family: 'Playfair Display', serif;
+      margin-top: 0;
+      text-align: center;
+    }
+
+    .section p,
+    .details p,
+    .location p {
+      font-size: 1.15rem;
+      text-align: center;
+    }
+
+    .details strong,
+    .location strong {
+      font-weight: 600;
+    }
+
+    .location iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+
+    .video {
+      text-align: center;
+      margin: 2rem 0;
+      animation: fadeIn 2s;
+    }
+
+    .video iframe {
+      width: 90%;
+      max-width: 560px;
+      height: 315px;
+      border-radius: 1rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .countdown {
+      font-size: 2rem;
+      text-align: center;
+      margin: 2rem 0;
+      font-weight: bold;
+      color: #ff3e81;
+      font-family: 'Playfair Display', serif;
+      /* animation: pulse 2s infinite; */
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .contact {
+      max-width: 600px;
+      margin: 0 auto;
+      padding-top: 1rem;
+      text-align: center;
+    }
+
+    .contact p {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact a {
+      color: #d6336c;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 1rem;
+      color: #444;
+      background: linear-gradient(to top, #fff0f3, #ffe5e9);
+      font-family: 'Playfair Display', serif;
+      border-top: 2px solid #f3c4d6;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.8rem;
+      }
+
+      .section {
+        padding: 1.5rem;
+      }
+
+      .section h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(145deg, #fff0f5, #fceff9);
+      color: #333;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .hidden-section {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.8s ease-out;
+    }
+
+    .show-section {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const sections = document.querySelectorAll('.section');
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('show-section');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.1
+        }
+      );
+      sections.forEach((section) => {
+        section.classList.add('hidden-section');
+        observer.observe(section);
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <header class="animate__animated animate__fadeInDown">
+    <p>✨ Om Sri Ganeshaya Namaha ✨</p>
+    <h1>Satya ❤️ Mounika</h1>
+    <p>Save the Date: 10-08-2025 ❤️</p>
+  </header>
+
+  <div class="countdown-container">
+    <div class="countdown-block">
+      <div class="time-value" id="days">00</div>
+      <div class="time-unit">Days</div>
+    </div>
+    <div class="time-separator">:</div>
+    <div class="countdown-block">
+      <div class="time-value" id="hours">00</div>
+      <div class="time-unit">Hours</div>
+    </div>
+    <div class="time-separator">:</div>
+    <div class="countdown-block">
+      <div class="time-value" id="minutes">00</div>
+      <div class="time-unit">Minutes</div>
+    </div>
+    <div class="time-separator">:</div>
+    <div class="countdown-block">
+      <div class="time-value" id="seconds">00</div>
+      <div class="time-unit">Seconds</div>
+    </div>
+  </div>
+
+  <div class="video animate__animated animate__fadeIn">
+    <iframe src="https://www.youtube.com/embed/hCBu7DCPczY" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <div class="section">
+    <h2>You're Invited!</h2>
+    <p>With immense joy and gratitude to the almighty and our families,</p>
+    <p><strong>Satya</strong> and <strong>Mounika</strong> warmly invite you to celebrate the sacred union of their souls in marriage.</p>
+    <p>Your presence and blessings will make our occasion more special and memorable.</p>
+    <div class="details">
+      <p>🤵‍♂️ <strong>Groom:</strong> Venkata Satya Prasad<br />S/o Sri. Behara Venkata Srinivasa Rao & Smt. Rajya Lakshmi</p>
+      <p>👰‍♀️ <strong>Bride:</strong> Dr. Suma Mounika<br />D/o Sri. Devalaraju Venkateswara Rao & Smt. Naga Shanthi</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Kalyana Sumuhurtham</h2>
+    <div class="location">
+      <p>🗓 <strong>Date:</strong> 10th August 2025, Sunday</p>
+      <p>🕛 <strong>Time:</strong> 12:04 PM (Afternoon)</p>
+      <p>📍 <strong>Venue:</strong> Sri Lakshmi Srinivasa Function Hall, Nellore</p>
+      <p><a href="events/wedding.ics" download class="calendar-btn">➕ Add to Calendar</a></p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.9535589491725!2d79.97440327544568!3d14.429839986036592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4cf3002fa4aeb3%3A0x61c1c25f1b572acd!2sSri%20Lakshmi%20Srinivasa%20Function%20Hall!5e0!3m2!1sen!2sin!4v1752984922517!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Vratham</h2>
+    <div class="location">
+      <p>🗓 <strong>Date:</strong> 12th August 2025, Tuesday</p>
+      <p>🕗 <strong>Time:</strong> 8:00 AM</p>
+      <p>📍 <strong>Venue:</strong> Our Residence, Dachepalli</p>
+      <p><a href="events/vratham.ics" download class="calendar-btn">➕ Add to Calendar</a></p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1911.8295137507926!2d79.72855656426216!3d16.59366209788138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3541db4600f409%3A0x2837ab4c1196b96b!2sKola%20Satyanarayana%20Reddy%20Nagar%2C%20Dachepalle%2C%20Nadikudi%2C%20Andhra%20Pradesh%20522414!5e0!3m2!1sen!2sin!4v1752985134086!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Reception & Dinner</h2>
+    <div class="location">
+      <p>🗓 <strong>Date:</strong> 12th August 2025, Tuesday</p>
+      <p>🕗 <strong>Time:</strong> 8:00 PM onwards</p>
+      <p>📍 <strong>Venue:</strong> Srinidhi Function Hall, Dachepalli</p>
+      <p><a href="events/reception.ics" download class="calendar-btn">➕ Add to Calendar</a></p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3823.588259685097!2d79.74604027548641!3d16.59722028416148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a356b0009cad28d%3A0x64c882831dbcbe53!2zU3JpbmlkaGkgZ2FyZGVuICYgZnVuY3Rpb24gaGFsbCDgsLbgsY3gsLDgsYDgsKjgsL_gsKfgsL8g4LCX4LC-4LCw4LGN4LCh4LGG4LCo4LGNICYg4LCr4LCC4LCV4LGN4LC34LCo4LGNIOCwueCwvuCwsuCxjQ!5e0!3m2!1sen!2sin!4v1752984879434!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Contact</h2>
+    <div class="contact">
+      <p>Have questions or want to share your blessings?</p>
+      <p>Call us at <a href="tel:+917093657303">+91 70936 57303</a></p>
+      <p>or email us at <a href="mailto:samomanam0805@gmail.com">samomanam0805@gmail.com</a></p>
+    </div>
+  </div>
+
+  <footer>
+    With heartfelt love and joy,<br />
+    <strong>Behara & Devalaraju Families</strong>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Set the release date (1 week from now)
+      // Set the wedding date and time: August 10, 2025, 12:04 PM
+      const weddingDate = new Date(2025, 7, 10, 12, 4, 0, 0); // Month is 0-indexed (7 = August)
+
+      // Elements
+      const daysEl = document.getElementById('days');
+      const hoursEl = document.getElementById('hours');
+      const minutesEl = document.getElementById('minutes');
+      const secondsEl = document.getElementById('seconds');
+      const notifyButton = document.getElementById('notify-button');
+      const successNotification = document.getElementById('success-notification');
+
+      // Update countdown
+      function updateCountdown() {
+        const now = new Date();
+        const diff = weddingDate - now;
+
+        if (diff <= 0) {
+          // Countdown is over — show message
+          document.querySelector('.countdown-container').style.display = 'none';
+
+          const thankYouMessage = document.createElement('div');
+          thankYouMessage.classList.add('countdown');
+          thankYouMessage.innerHTML = `🎉 <span style="font-family: 'Great Vibes', cursive;">We're Married Now!</span><br>🙏 Thank You for Your Blessings`;
+
+          const header = document.querySelector('header');
+          header.insertAdjacentElement('afterend', thankYouMessage);
+
+          clearInterval(timerInterval);
+          return;
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        // Update with leading zeros
+        daysEl.textContent = days < 10 ? `0${days}` : days;
+        hoursEl.textContent = hours < 10 ? `0${hours}` : hours;
+        minutesEl.textContent = minutes < 10 ? `0${minutes}` : minutes;
+        secondsEl.textContent = seconds < 10 ? `0${seconds}` : seconds;
+
+        // Add flip animation on seconds change
+        if (seconds !== previousSeconds) {
+          const secondsBlock = secondsEl.parentElement;
+          secondsBlock.classList.add('flip');
+          setTimeout(() => {
+            secondsBlock.classList.remove('flip');
+          }, 500);
+          previousSeconds = seconds;
+        }
+      }
+
+      let previousSeconds = -1;
+
+      // Initial call and set interval
+      updateCountdown();
+      const timerInterval = setInterval(updateCountdown, 1000);
+
+      // Notification button
+      notifyButton.addEventListener('click', function() {
+        successNotification.classList.add('show');
+
+        setTimeout(() => {
+          successNotification.classList.remove('show');
+        }, 4000);
+      });
+
+      // Platform icons hover effect
+      const platformIcons = document.querySelectorAll('.platform-icon');
+      platformIcons.forEach(icon => {
+        icon.addEventListener('mouseenter', () => {
+          icon.style.boxShadow = `0 0 20px rgba(255, 255, 255, 0.5)`;
+        });
+
+        icon.addEventListener('mouseleave', () => {
+          icon.style.boxShadow = 'none';
+        });
+      });
+    });
+  </script>
+
+</body>
+
+</html>

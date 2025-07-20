@@ -1,0 +1,10 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+SUMMARY:Satya ❤️ Mounika Vratham Ceremony
+DTSTART;TZID=Asia/Kolkata:20250812T080000
+DTEND;TZID=Asia/Kolkata:20250812T100000
+LOCATION: Our Residence, Dachepalli
+DESCRIPTION:Join us for the traditional Vratham ritual at our residence.
+END:VEVENT
+END:VCALENDAR
