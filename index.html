@@ -326,7 +326,11 @@
       <p>🗓 <strong>Date:</strong> 10th August 2025, Sunday</p>
       <p>🕛 <strong>Time:</strong> 12:04 PM (Afternoon)</p>
       <p>📍 <strong>Venue:</strong> Sri Lakshmi Srinivasa Function Hall, Nellore</p>
-      <p><a href="events/wedding.ics" download class="calendar-btn">➕ Add to Calendar</a></p>
+      <p>
+        <span class="calendar-btn-wrap" data-title="Satya ❤️ Mounika Wedding" data-details="Join us for the wedding ceremony" data-location="Sri Lakshmi Srinivasa Function Hall, Nellore" data-start="20250810T063000Z" data-end="20250810T083000Z" data-ics="events/wedding.ics">
+          <a class="calendar-btn">➕ Add to Calendar</a>
+        </span>
+      </p>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.9535589491725!2d79.97440327544568!3d14.429839986036592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4cf3002fa4aeb3%3A0x61c1c25f1b572acd!2sSri%20Lakshmi%20Srinivasa%20Function%20Hall!5e0!3m2!1sen!2sin!4v1752984922517!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </div>
@@ -337,7 +341,11 @@
       <p>🗓 <strong>Date:</strong> 12th August 2025, Tuesday</p>
       <p>🕗 <strong>Time:</strong> 8:00 AM</p>
       <p>📍 <strong>Venue:</strong> Our Residence, Dachepalli</p>
-      <p><a href="events/vratham.ics" download class="calendar-btn">➕ Add to Calendar</a></p>
+      <p>
+        <span class="calendar-btn-wrap" data-title="Vratham Ceremony" data-details="Join us for the traditional Vratham" data-location="Our Residence, Dachepalli" data-start="20250812T023000Z" data-end="20250812T040000Z" data-ics="events/vratham.ics">
+          <a class="calendar-btn">➕ Add to Calendar</a>
+        </span>
+      </p>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1911.8295137507926!2d79.72855656426216!3d16.59366209788138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3541db4600f409%3A0x2837ab4c1196b96b!2sKola%20Satyanarayana%20Reddy%20Nagar%2C%20Dachepalle%2C%20Nadikudi%2C%20Andhra%20Pradesh%20522414!5e0!3m2!1sen!2sin!4v1752985134086!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </div>
@@ -348,7 +356,11 @@
       <p>🗓 <strong>Date:</strong> 12th August 2025, Tuesday</p>
       <p>🕗 <strong>Time:</strong> 8:00 PM onwards</p>
       <p>📍 <strong>Venue:</strong> Srinidhi Function Hall, Dachepalli</p>
-      <p><a href="events/reception.ics" download class="calendar-btn">➕ Add to Calendar</a></p>
+      <p>
+        <span class="calendar-btn-wrap" data-title="Reception & Dinner" data-details="Let’s celebrate together at our Reception" data-location="Srinidhi Function Hall, Dachepalli" data-start="20250812T143000Z" data-end="20250812T170000Z" data-ics="events/reception.ics">
+          <a class="calendar-btn">➕ Add to Calendar</a>
+        </span>
+      </p>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3823.588259685097!2d79.74604027548641!3d16.59722028416148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a356b0009cad28d%3A0x64c882831dbcbe53!2zU3JpbmlkaGkgZ2FyZGVuICYgZnVuY3Rpb24gaGFsbCDgsLbgsY3gsLDgsYDgsKjgsL_gsKfgsL8g4LCX4LC-4LCw4LGN4LCh4LGG4LCo4LGNICYg4LCr4LCC4LCV4LGN4LC34LCo4LGNIOCwueCwvuCwsuCxjQ!5e0!3m2!1sen!2sin!4v1752984879434!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </div>
@@ -449,6 +461,30 @@
           icon.style.boxShadow = 'none';
         });
       });
+    });
+  </script>
+  <script>
+    const isAndroid = /Android/i.test(navigator.userAgent);
+
+    document.querySelectorAll('.calendar-btn-wrap').forEach(el => {
+      const title = encodeURIComponent(el.dataset.title);
+      const details = encodeURIComponent(el.dataset.details);
+      const location = encodeURIComponent(el.dataset.location);
+      const start = el.dataset.start;
+      const end = el.dataset.end;
+      const icsLink = el.dataset.ics;
+
+      const googleLink = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&details=${details}&location=${location}&dates=${start}/${end}`;
+
+      const a = el.querySelector('a');
+
+      if (isAndroid) {
+        a.setAttribute('href', googleLink);
+        a.setAttribute('target', '_blank');
+      } else {
+        a.setAttribute('href', icsLink);
+        a.setAttribute('download', '');
+      }
     });
   </script>
 
